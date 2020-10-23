@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LoadingContext } from "./LoadingContext";
 
 const Opening = () => {
   const [loadContent, setLoadContent] = useState(0);
 
+  const { loading, setLoading } = useContext(LoadingContext);
+
   const startToLoad = () => {
     setLoadContent(1);
+  };
+
+  const buttonClick = () => {
+    setLoading(loading + 1);
   };
 
   useEffect(() => {
@@ -14,9 +21,9 @@ const Opening = () => {
   }, []);
 
   return (
-    <div style={{opacity: loadContent}}>
+    <div style={{ opacity: loadContent }}>
       <div>Jonas The Developer</div>
-      <button>Press here to start</button>
+      <button onClick={buttonClick}>Press here to start</button>
     </div>
   );
 };
