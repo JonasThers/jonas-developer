@@ -11,8 +11,8 @@ const Resume = () => {
           return (
             <div>
               <div>{Educationsdata.degree}</div>
-              <div>{Educationsdata.school}</div>
-              <div>{Educationsdata.electives}</div>
+              <div>From {Educationsdata.school}</div>
+              <div>Electives: {Educationsdata.electives}</div>
             </div>
           );
         })}
@@ -23,11 +23,11 @@ const Resume = () => {
           return (
             <div>
               <div>{Workdata.title}</div>
-              <div>{Workdata.workplace}</div>
+              <div>- {Workdata.workplace}</div>
               <div>
                 {Workdata.start} - {Workdata.end}
               </div>
-              <div>{Workdata.technologies.join(", ")}</div>
+              <div>Technologies used: {Workdata.technologies.join(", ")}</div>
             </div>
           );
         })}

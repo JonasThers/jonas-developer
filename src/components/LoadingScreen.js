@@ -1,12 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { LoadingContext } from "./LoadingContext";
 
 const LoadingScreen = () => {
   const { loading, setLoading } = useContext(LoadingContext);
 
+  const [loadContent, setLoadContent] = useState(0);
+
+  const startToLoad = () => {
+    setLoadContent(1);
+  };
+
   const skipIntro = () => {
     setLoading(loading + 1);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      startToLoad();
+    }, 500);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,7 +27,7 @@ const LoadingScreen = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ opacity: loadContent }}>
       <div>Loading screen</div>
       <button onClick={skipIntro}>Skip intro</button>
     </div>
