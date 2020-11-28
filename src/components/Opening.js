@@ -24,7 +24,9 @@ const Opening = () => {
   return (
     <div style={{ opacity: loadContent }}>
       <Header />
-      <button onClick={buttonClick}>Press here to start</button>
+      <div className="center">
+        <button onClick={buttonClick}>Press here to start</button>
+      </div>
     </div>
   );
 };
