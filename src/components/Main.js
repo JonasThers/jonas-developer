@@ -25,6 +25,9 @@ const Main = () => {
         </div>
       </div>
       <Resume />
+      <div className="main__contact">
+        Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
+      </div>
     </div>
   );
 };
