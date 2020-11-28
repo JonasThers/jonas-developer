@@ -10,9 +10,13 @@
   "author": "Jonas Thers",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^5.0.1",
+    "node-sass": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-typing-animation": "^1.6.2"
+    "react-typing-animation": "^1.6.2",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
