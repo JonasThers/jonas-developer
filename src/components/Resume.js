@@ -4,9 +4,9 @@ import Workdata from "../json/Work";
 
 const Resume = () => {
   return (
-    <div>
-      <div>
-        Education:
+    <div className="resume">
+      <div className="resume__education">
+      <div className="resume__education-title">Education</div>
         {Educationsdata.map((Educationsdata, index) => {
           return (
             <div>
@@ -17,8 +17,8 @@ const Resume = () => {
           );
         })}
       </div>
-      <div>
-        Work experience:
+      <div className="resume__work">
+        <div className="resume__work-title">Work experience</div>
         {Workdata.map((Workdata, index) => {
           return (
             <div>

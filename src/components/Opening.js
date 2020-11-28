@@ -29,6 +29,7 @@ const Opening = () => {
       <Header />
       <div className="center">
         <button onClick={buttonClick}>Press here to start</button>
+        <div className="opening__trademark">Jonas Thers © 2020</div>
       </div>
     </div>
   );

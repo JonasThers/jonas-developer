@@ -28,7 +28,7 @@ const Workdata = [
     technologies: ["HTML", "CSS", "Javascript"],
   },
   {
-    title: "Volunteer Developer",
+    title: "Wordpress Developer",
     workplace: "Action Child Aid",
     start: "February 2018",
     end: "October 2018",

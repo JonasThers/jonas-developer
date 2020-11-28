@@ -27,7 +27,7 @@ const LoadingScreen = () => {
   }, []);
 
   return (
-    <div className="intro" style={{ opacity: loadContent }}>
+    <div className="intro container" style={{ opacity: loadContent }}>
       {startTyping && (
           <div className="intro__text">
             <Typing onFinishedTyping={skipIntro}>

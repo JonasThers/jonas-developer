@@ -3,6 +3,7 @@ import Opening from "./components/Opening";
 import LoadingScreen from "./components/LoadingScreen";
 import Main from "./components/Main";
 import { LoadingContext } from "./components/LoadingContext";
+import StarfieldAnimation from 'react-starfield-animation'
 
 const App = () => {
   const [loading, setLoading] = useState(1);
