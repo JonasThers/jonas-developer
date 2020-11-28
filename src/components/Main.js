@@ -16,13 +16,11 @@ const Main = () => {
   }, []);
 
   return (
-    <div style={{ opacity: loadContent }}>
-      <div className="main">
-        <Header />
-        <div className="main__current-job">Currently employed at <a href="https://www.lamia.fi">Lamia</a></div>
-        <div className="main__intro">
-          Hello, my name is Jonas, and I'm a Danish developer living in Espoo, Helsinki.
-        </div>
+    <div className="main" style={{ opacity: loadContent }}>
+      <Header />
+      <div className="main__current-job">Currently employed at <a href="https://www.lamia.fi">Lamia</a></div>
+      <div className="main__intro">
+        Hello, my name is Jonas, and I'm a Danish developer living in Espoo, Helsinki.
       </div>
       <Resume />
       <div className="main__contact">

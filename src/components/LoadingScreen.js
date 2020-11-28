@@ -13,7 +13,10 @@ const LoadingScreen = () => {
   };
 
   const skipIntro = () => {
-    setLoading(loading + 1);
+    setLoadContent(0);
+    setTimeout(() => {
+      setLoading(loading + 1);
+    }, 500);
   };
 
   useEffect(() => {
@@ -24,7 +27,7 @@ const LoadingScreen = () => {
   }, []);
 
   return (
-    <div style={{ opacity: loadContent }}>
+    <div className="intro" style={{ opacity: loadContent }}>
       {startTyping && (
           <div className="intro__text">
             <Typing onFinishedTyping={skipIntro}>

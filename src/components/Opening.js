@@ -12,7 +12,10 @@ const Opening = () => {
   };
 
   const buttonClick = () => {
-    setLoading(loading + 1);
+    setLoadContent(0);
+    setTimeout(() => {
+      setLoading(loading + 1);
+    }, 500);
   };
 
   useEffect(() => {
@@ -22,7 +25,7 @@ const Opening = () => {
   }, []);
 
   return (
-    <div style={{ opacity: loadContent }}>
+    <div className="opening" style={{ opacity: loadContent }}>
       <Header />
       <div className="center">
         <button onClick={buttonClick}>Press here to start</button>
