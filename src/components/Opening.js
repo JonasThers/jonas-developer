@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import Header from './Header';
 import { LoadingContext } from "./LoadingContext";
 
 const Opening = () => {
@@ -22,7 +23,7 @@ const Opening = () => {
 
   return (
     <div style={{ opacity: loadContent }}>
-      <div>Jonas The Developer</div>
+      <Header />
       <button onClick={buttonClick}>Press here to start</button>
     </div>
   );
