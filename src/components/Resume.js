@@ -9,9 +9,9 @@ const Resume = () => {
       <div className="resume__education-title">Education</div>
         {Educationsdata.map((Educationsdata, index) => {
           return (
-            <div>
-              <div>{Educationsdata.degree}</div>
-              <div>From {Educationsdata.school}</div>
+            <div className="experience">
+              <div className="experience__title">{Educationsdata.degree}</div>
+              <div>- From {Educationsdata.school}</div>
               <div>Electives: {Educationsdata.electives}</div>
             </div>
           );
@@ -21,8 +21,8 @@ const Resume = () => {
         <div className="resume__work-title">Work experience</div>
         {Workdata.map((Workdata, index) => {
           return (
-            <div>
-              <div>{Workdata.title}</div>
+            <div className="experience">
+              <div className="experience__title">{Workdata.title}</div>
               <div>- {Workdata.workplace}</div>
               <div>
                 {Workdata.start} - {Workdata.end}

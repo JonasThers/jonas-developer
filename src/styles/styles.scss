@@ -1,109 +1,250 @@
-@import './maps/maps';
+@import "./maps/maps";
 
 * {
-    color: map-get($colors, 'white');
-    background: map-get($colors, 'black');
-    font-family: 'Press Start 2P', cursive;
-    text-transform: uppercase;
+  color: map-get($colors, "white");
+  //background: map-get($colors, 'black');
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+}
+
+body {
+  background: #000
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: 1;
+  background-position: bottom right;
+  height: 100%;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: 1;
+  height: 100%;
+}
+
+.twinkling {
+  background: transparent
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
+    top center;
+  z-index: 0;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
 }
 
 .header {
-    text-align: center;
-    font-size: map-get($font-sizes, 'big');
-    text-shadow: 1px 2px map-get($colors, 'red');
+  text-align: center;
+  font-size: map-get($font-sizes, "big");
+  text-shadow: 1px 2px map-get($colors, "red");
 }
 
 .opening,
 .main,
 .intro {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .opening {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    &__trademark {
-        margin-top: map-get($spacing-unit, 'default');
-    }
+  &__trademark {
+    margin-top: map-get($spacing-unit, "default");
+  }
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 button {
-    border: 0;
-    font-size: map-get($font-sizes, 'default');
-    margin-top: map-get($spacing-unit, 'default');
-    text-transform: uppercase;
+  border: 0;
+  font-size: map-get($font-sizes, "default");
+  margin-top: map-get($spacing-unit, "default");
+  text-transform: uppercase;
+  background: map-get($colors, "black");
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:focus {
-        outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
+
+  &.skip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    bottom: map-get($spacing-unit, "default");
+  }
 }
 
 .main {
-    padding-top: map-get($spacing-unit, 'default');
+  padding-top: map-get($spacing-unit, "default");
 
-    a {
-        color: map-get($colors, 'white');
-        padding-bottom: 3px;
-        border-bottom: 1px solid map-get($colors, 'white');
-        word-break: break-all;
-    }
+  a {
+    color: map-get($colors, "white");
+    padding-bottom: 3px;
+    border-bottom: 1px solid map-get($colors, "white");
+    word-break: break-all;
+  }
 
-    &__current-job {
-        border-top: 2px solid map-get($colors, 'white');
-        border-bottom: 2px solid map-get($colors, 'white');
-        text-align: center;
-        padding: 1em 0 1em 0;
-        margin-top: map-get($spacing-unit, 'default');
-        margin-bottom: map-get($spacing-unit, 'default');
-    }
+  &__current-job {
+    border-top: 2px solid map-get($colors, "white");
+    border-bottom: 2px solid map-get($colors, "white");
+    text-align: center;
+    padding: 1em 0 1em 0;
+    margin-top: map-get($spacing-unit, "default");
+    margin-bottom: map-get($spacing-unit, "default");
+  }
 
-    &__contact {
-        text-align: center;
-        margin-top: map-get($spacing-unit, 'default');
-        margin-bottom: map-get($spacing-unit, 'default');
-    }
+  &__contact {
+    text-align: center;
+    margin-top: map-get($spacing-unit, "default");
+    margin-bottom: map-get($spacing-unit, "default");
+  }
 }
 
 .resume {
-    display: flex;
-    margin-top: map-get($spacing-unit, 'default');
-    flex-direction: column;
+  display: flex;
+  margin-top: map-get($spacing-unit, "default");
+  flex-direction: column;
 
-    &__education,
-    &__work {
-        border: 2px solid map-get($colors, 'white');
-        padding: map-get($spacing-unit, 'default');
+  &__education,
+  &__work {
+    border: 2px solid map-get($colors, "white");
+    border-radius: 5px;
+    padding: map-get($spacing-unit, "default") map-get($spacing-unit, "default")
+      0 map-get($spacing-unit, "default");
+    background: map-get($colors, "black");
 
-        &-title {
-            margin-bottom: 1em;
-            font-size: map-get($font-sizes, 'default');
-        }
-        
+    &-title {
+      margin-bottom: 1em;
+      font-size: map-get($font-sizes, "default");
     }
+  }
+
+  &__education {
+    margin-bottom: map-get($spacing-unit, "default");
+  }
+
+  .experience {
+    margin-bottom: map-get($spacing-unit, "default");
+    line-height: map-get($spacing-unit, "default");
+
+    &__title {
+      font-size: map-get($font-sizes, "default");
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .resume {
-        flex-direction: row;
-
-        &__education,
-        &__work {
-            width: 50%;
-        }
-
-        &__education {
-            margin-right: map-get($spacing-unit, 'default');
-        }
+  button {
+    &.skip {
+      bottom: map-get($spacing-unit, "giant");
     }
+  }
+
+  .resume {
+    flex-direction: row;
+    align-items: start;
+
+    &__education,
+    &__work {
+      width: 50%;
+    }
+
+    &__education {
+      margin-right: map-get($spacing-unit, "default");
+      margin-bottom: 0;
+    }
+  }
 }

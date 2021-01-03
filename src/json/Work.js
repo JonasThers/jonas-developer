@@ -9,6 +9,7 @@ const Workdata = [
       "PHP",
       "Drupal 8",
       "Vue",
+      "Nuxt",
       "Contentful",
       "Sass",
     ],
