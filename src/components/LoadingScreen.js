@@ -30,7 +30,7 @@ const LoadingScreen = () => {
     <div className="intro container" style={{ opacity: loadContent }}>
       {startTyping && (
           <div className="intro__text">
-            <Typing onFinishedTyping={skipIntro}>
+            <Typing onFinishedTyping={skipIntro} speed={60}>
               <div>
                 The adventure begins with young Jonas from Denmark. Instead of pursuing a career as a raiding viking, he chose one within web development.
               </div>

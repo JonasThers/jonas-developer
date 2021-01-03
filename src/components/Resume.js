@@ -12,7 +12,7 @@ const Resume = () => {
             <div className="experience">
               <div className="experience__title">{Educationsdata.degree}</div>
               <div>- From {Educationsdata.school}</div>
-              <div>Electives: {Educationsdata.electives}</div>
+              <div>- Electives: {Educationsdata.electives}</div>
             </div>
           );
         })}
