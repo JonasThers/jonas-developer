@@ -86,9 +86,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  
   width: 100%;
-  
   display: block;
 }
 
@@ -169,6 +167,14 @@ button {
   }
 }
 
+.intro__text {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .main {
   padding-top: map-get($spacing-unit, "default");
 
@@ -191,7 +197,6 @@ button {
   &__contact {
     text-align: center;
     margin-top: map-get($spacing-unit, "default");
-    margin-bottom: map-get($spacing-unit, "default");
   }
 }
 
@@ -207,6 +212,7 @@ button {
     padding: map-get($spacing-unit, "default") map-get($spacing-unit, "default")
       0 map-get($spacing-unit, "default");
     background: map-get($colors, "black");
+    font-size: 14px;
 
     &-title {
       margin-bottom: 1em;
@@ -220,22 +226,17 @@ button {
 
   .experience {
     margin-bottom: map-get($spacing-unit, "default");
-    line-height: map-get($spacing-unit, "default");
+    line-height: 1.7em;
+    margin-left: 1em;
 
     &__title {
       font-size: map-get($font-sizes, "default");
+      margin-left: -1em;
     }
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .intro__text {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
   
   button {
     &.skip {
