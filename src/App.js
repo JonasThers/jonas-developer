@@ -10,14 +10,12 @@ const App = () => {
   const loadingValue = useMemo(() => ({ loading, setLoading }));
 
   return (
-    <div className='stars'>
-      <div className='twinkling'>
+    <div className='twinkling'>
       <LoadingContext.Provider value={loadingValue}>
         {loading === 1 && <Opening />}
         {loading === 2 && <LoadingScreen />}
         {loading === 3 && <Main />}
       </LoadingContext.Provider>
-      </div>
     </div>
   );
 };

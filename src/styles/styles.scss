@@ -12,8 +12,6 @@ body {
     url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
     center;
   z-index: 1;
-  background-position: bottom right;
-  height: 100%;
 }
 
 @keyframes move-twink-back {
@@ -88,24 +86,28 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  
   width: 100%;
-  height: 100%;
+  
   display: block;
-}
-
-.stars {
-  background: #000
-    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
-    center;
-  z-index: 1;
-  height: 100%;
 }
 
 .twinkling {
   background: transparent
-    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
-    top center;
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png);
+  z-index: 0;
+  height: 100%;
+  bottom: 0;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.twinkling-test {
+  background: transparent
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png);
   z-index: 0;
   -moz-animation: move-twink-back 200s linear infinite;
   -ms-animation: move-twink-back 200s linear infinite;
@@ -227,6 +229,14 @@ button {
 }
 
 @media only screen and (min-width: 992px) {
+  .intro__text {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
   button {
     &.skip {
       bottom: map-get($spacing-unit, "giant");

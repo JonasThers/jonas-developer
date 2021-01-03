@@ -16,12 +16,14 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="main container" style={{ opacity: loadContent }}>
-      <Header />
-      <div className="main__current-job">Currently employed at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
-      <Resume />
-      <div className="main__contact">
-        Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
+    <div className="twinkling-test">
+      <div className="main container" style={{ opacity: loadContent }}>
+        <Header />
+        <div className="main__current-job">Currently employed at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
+        <Resume />
+        <div className="main__contact">
+          Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
+        </div>
       </div>
     </div>
   );
