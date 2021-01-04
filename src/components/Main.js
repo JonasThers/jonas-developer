@@ -16,7 +16,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="twinkling-test">
+    <div className="twinkling-fix">
       <div className="main container" style={{ opacity: loadContent }}>
         <Header />
         <div className="main__current-job">Currently employed at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
