@@ -25,12 +25,16 @@ module.exports = {
                     'sass-loader',
                 ]
             },
+            {
+                test: /\.(png|jpg|gif|svg|css|eot|ttf)$/,
+                loader: 'url-loader',
+            },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            favicon: "./src/favicon.png"
+            favicon: "./src/assets/favicon.png"
         })
     ]
 }
