@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from './Header';
 import Resume from "./Resume";
+import Github from "../assets/github.png";
 
 const Main = () => {
   const [loadContent, setLoadContent] = useState(0);
@@ -25,6 +26,11 @@ const Main = () => {
           Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
         </div>
         <br />
+        <div className="github-link">
+          <a target="blank" href="https://www.github.com/JonasThers">
+            <img src={Github} />
+          </a>
+        </div>
       </div>
     </div>
   );
