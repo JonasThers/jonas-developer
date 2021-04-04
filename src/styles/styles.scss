@@ -1,17 +1,31 @@
 @import "./maps/maps";
 
-* {
-  color: map-get($colors, "white");
-  //background: map-get($colors, 'black');
-  font-family: "Press Start 2P", cursive;
-  text-transform: uppercase;
+.retro-background {
+  background: #000 url("../assets/stars-min.png") repeat top center;
+  z-index: 1;
+  height: 100vh;
+
+  * {
+    color: map-get($colors, "white");
+    font-family: "Press Start 2P", cursive;
+    text-transform: uppercase;
+  }
 }
 
-body {
-  background: #000
-    url('../assets/stars-min.png') repeat top
-    center;
-  z-index: 1;
+.switch {
+  position: absolute;
+  top: map-get($spacing-unit, "small");
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  .off {
+    border: 2px solid white;
+
+    .react-switch-bg {
+      background: map-get($colors, 'black') !important;
+    }
+  }
 }
 
 @keyframes move-twink-back {
@@ -91,8 +105,7 @@ body {
 }
 
 .twinkling {
-  background: transparent
-    url('../assets/twinkling-min.png');
+  background: transparent url("../assets/twinkling-min.png");
   z-index: 0;
   height: 100%;
   bottom: 0;
@@ -104,14 +117,17 @@ body {
 }
 
 .twinkling-fix {
-  background: transparent
-    url('../assets/twinkling-min.png');
+  background: transparent url("../assets/twinkling-min.png");
   z-index: 0;
   -moz-animation: move-twink-back 200s linear infinite;
   -ms-animation: move-twink-back 200s linear infinite;
   -o-animation: move-twink-back 200s linear infinite;
   -webkit-animation: move-twink-back 200s linear infinite;
   animation: move-twink-back 200s linear infinite;
+}
+
+.twinkling-fix-background {
+  background: #000 url("../assets/stars-min.png") repeat top center;
 }
 
 .header {
@@ -177,7 +193,7 @@ button {
 }
 
 .main {
-  padding-top: map-get($spacing-unit, "default");
+  padding-top: map-get($spacing-unit, "giant");
 
   .github-link {
     padding-bottom: map-get($spacing-unit, "default");
@@ -253,11 +269,10 @@ button {
 }
 
 @media only screen and (min-width: 992px) {
-
   .intro__text {
     font-size: 20px;
   }
-  
+
   button {
     &.skip {
       bottom: map-get($spacing-unit, "giant");

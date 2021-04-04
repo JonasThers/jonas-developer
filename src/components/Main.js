@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Header from './Header';
 import Resume from "./Resume";
 import Github from "../assets/github.png";
+import { ThemeContext } from "./ThemeContext";
 
 const Main = () => {
+  const { theme } = useContext(ThemeContext);
+
   const [loadContent, setLoadContent] = useState(0);
 
   const startToLoad = () => {
@@ -17,7 +20,8 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="twinkling-fix">
+    <div className={theme ? '' : 'twinkling-fix-background'}>
+    <div className={theme ? '' : 'twinkling-fix'}>
       <div className="main container" style={{ opacity: loadContent }}>
         <Header />
         <div className="main__current-job">Currently employed at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
@@ -32,6 +36,7 @@ const Main = () => {
           </a>
         </div>
       </div>
+    </div>
     </div>
   );
 };

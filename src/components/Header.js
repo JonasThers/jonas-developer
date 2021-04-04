@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 const Header = () => {
 
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className="header">
-        Jonas The Developer
+        {theme ? 'Hello world, my name is Jonas' : 'Jonas The Developer'}
     </div>
   );
 };
