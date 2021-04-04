@@ -7,7 +7,7 @@ import { LoadingContext } from "./components/LoadingContext";
 import { ThemeContext } from "./components/ThemeContext";
 
 const App = () => {
-  const [loading, setLoading] = useState(1);
+  const [loading, setLoading] = useState(3);
   const [theme, setTheme] = useState(false);
 
   const loadingValue = useMemo(() => ({ loading, setLoading }));

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Header from './Header';
 import Resume from "./Resume";
-import Github from "../assets/github.png";
+import Github from "../assets/github2.png";
 import { ThemeContext } from "./ThemeContext";
 
 const Main = () => {
