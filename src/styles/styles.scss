@@ -1,5 +1,17 @@
 @import "./maps/maps";
 
+body {
+  background: linear-gradient(
+    to right,
+    map-get($colors, "dark-blue"),
+    map-get($colors, "light-blue")
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .retro-background {
   background: #000 url("../assets/stars-min.png") repeat top center;
   z-index: 1;
@@ -12,6 +24,51 @@
   }
 }
 
+.modern-background {
+  background: linear-gradient(
+    to right,
+    map-get($colors, "dark-blue"),
+    map-get($colors, "light-blue")
+  );
+
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+
+  button {
+    color: map-get($colors, "white");
+    background: transparent;
+    text-transform: capitalize;
+    border-bottom: 2px solid map-get($colors, "white");
+  }
+
+  .header {
+    color: map-get($colors, "white");
+    text-shadow: none;
+    font-weight: bold;
+  }
+
+  .resume__work,
+  .resume__education {
+    background: map-get($colors, "white");
+    color: map-get($colors, "black");
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  .main__current-job {
+    font-weight: bold;
+  }
+}
+
+.main__contact,
+.main__current-job,
+.intro__text {
+  color: map-get($colors, "white");
+}
+
 .switch {
   position: absolute;
   top: map-get($spacing-unit, "small");
@@ -20,10 +77,26 @@
   transform: translateX(-50%);
 
   .off {
-    border: 2px solid white;
+    border: 2px solid map-get($colors, "white");
 
     .react-switch-bg {
-      background: map-get($colors, 'black') !important;
+      background: map-get($colors, "black") !important;
+    }
+  }
+
+  .on {
+    color: map-get($colors, "black");
+
+    .react-switch-bg {
+      background: map-get($colors, "white") !important;
+    }
+
+    .react-switch-handle {
+      background: map-get($colors, "light-blue") !important;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
@@ -138,7 +211,8 @@
 
 .opening,
 .main,
-.intro {
+.intro,
+.switch {
   transition: 0.7s;
 }
 
@@ -247,6 +321,7 @@ button {
     font-size: 14px;
 
     &-title {
+      text-align: center;
       margin-bottom: 1em;
       font-size: map-get($font-sizes, "default");
     }

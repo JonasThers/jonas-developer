@@ -1,9 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import { LoadingContext } from "./LoadingContext";
+import { ThemeContext } from "./ThemeContext";
 import Typing from 'react-typing-animation';
 
 const LoadingScreen = () => {
   const { loading, setLoading } = useContext(LoadingContext);
+  const { theme } = useContext(ThemeContext);
 
   const [loadContent, setLoadContent] = useState(0);
   const [startTyping, setStartTyping] = useState(false);
@@ -30,11 +32,11 @@ const LoadingScreen = () => {
     <div className="intro container" style={{ opacity: loadContent }}>
       {startTyping && (
         <div className="intro__text">
-          <Typing onFinishedTyping={skipIntro} speed={60}>
+          <Typing onFinishedTyping={skipIntro} speed={theme ? 30 : 50}>
             <div className="intro__content">
               <Typing.Delay ms={100} />
-              The adventure begins with young Jonas from Denmark. 
-              <Typing.Delay ms={500} /> 
+              The adventure begins with young Jonas from Denmark.{' '}
+              <Typing.Delay ms={500} />
               Instead of pursuing a career as a raiding viking, he chose one within web development.
               </div>
             <Typing.Delay ms={1000} />

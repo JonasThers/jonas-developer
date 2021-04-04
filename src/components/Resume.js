@@ -23,7 +23,7 @@ const Resume = () => {
           return (
             <div className="experience" key={Workdata.title}>
               <div className="experience__title">{Workdata.title}</div>
-              <div>- {Workdata.workplace}</div>
+              <div>- At {Workdata.workplace}</div>
               <div>
                 - {Workdata.start} - {Workdata.end}
               </div>

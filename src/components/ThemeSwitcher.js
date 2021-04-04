@@ -1,13 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "./ThemeContext";
 import Switch from "react-switch";
 
 const ThemeSwitcher = () => {
+    const [loadContent, setLoadContent] = useState(0);
+
+    const startToLoad = () => {
+        setLoadContent(1);
+    };
+
+    useEffect(() => {
+        setTimeout(() => {
+            startToLoad();
+        }, 500);
+    }, []);
 
     const { theme, setTheme } = useContext(ThemeContext);
 
     const handleChange = () => {
-        if(theme) {
+        if (theme) {
             setTheme(false);
         }
         else {
@@ -16,7 +27,7 @@ const ThemeSwitcher = () => {
     }
 
     return (
-        <div className="switch">
+        <div className="switch" style={{ opacity: loadContent }}>
             <Switch
                 checked={theme}
                 onChange={handleChange}
@@ -30,7 +41,7 @@ const ThemeSwitcher = () => {
                             justifyContent: "center",
                             alignItems: "center",
                             height: "100%",
-                            fontSize: 8,
+                            fontSize: 9,
                             color: "white",
                             paddingRight: 15,
                         }}
@@ -45,8 +56,8 @@ const ThemeSwitcher = () => {
                             justifyContent: "center",
                             alignItems: "center",
                             height: "100%",
-                            fontSize: 8,
-                            paddingLeft: 20
+                            fontSize: 12,
+                            paddingLeft: 22
                         }}>
                         Modern
                     </div>

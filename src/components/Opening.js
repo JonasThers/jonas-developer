@@ -7,7 +7,6 @@ const Opening = () => {
   const [loadContent, setLoadContent] = useState(0);
 
   const { loading, setLoading } = useContext(LoadingContext);
-
   const { theme } = useContext(ThemeContext);
 
   const startToLoad = () => {
@@ -32,7 +31,7 @@ const Opening = () => {
       <Header />
       <div className="center">
         <button onClick={buttonClick}>{theme ? 'Learn more about me' : 'Press here to start'}</button>
-        <div className="opening__trademark">Jonas Thers © 2021</div>
+        {!theme && <div className="opening__trademark">Jonas Thers © 2021</div>}
       </div>
     </div>
   );
