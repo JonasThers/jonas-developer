@@ -27,7 +27,8 @@ const ModernOpening = () => {
                         <Typing.Backspace count={26} />
                </div>
                 <div>I've been living in Finland for a few years</div>
-                <Typing.Delay ms={1000} />
+                <Typing.Delay ms={700} />
+                <Typing.Backspace count={43} />
             </Typing>
         </div>
     );
