@@ -1,6 +1,6 @@
 import React from "react";
-import Educationsdata from "../json/Education";
-import Workdata from "../json/Work";
+import Educationsdata from "../data/Education";
+import Workdata from "../data/Work";
 
 const Resume = () => {
   return (

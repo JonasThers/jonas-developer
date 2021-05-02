@@ -85,10 +85,19 @@ body {
 
 .switch {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   top: map-get($spacing-unit, "small");
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+
+  &__title {
+    margin-bottom: 0.5em;
+    color: map-get($colors, "white");
+  }
 
   .off {
     border: 2px solid map-get($colors, "white");
@@ -112,6 +121,12 @@ body {
         outline: none;
       }
     }
+  }
+}
+
+.retro {
+  .switch__title {
+    font-size: map-get($font-sizes, "small");
   }
 }
 

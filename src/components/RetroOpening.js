@@ -8,7 +8,6 @@ const RetroOpening = () => {
     const [setLoadContent] = useState(0);
 
     const skipIntro = () => {
-        //setLoadContent(0);
         setTimeout(() => {
             setLoading(loading + 1);
         }, 500);

@@ -28,6 +28,7 @@ const ThemeSwitcher = () => {
 
     return (
         <div className="switch" style={{ opacity: loadContent }}>
+            <div className="switch__title">Switch Theme</div>
             <Switch
                 checked={theme}
                 onChange={handleChange}

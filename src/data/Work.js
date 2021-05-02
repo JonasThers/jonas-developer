@@ -11,6 +11,7 @@ const Workdata = [
       "Vue",
       "Nuxt",
       "Contentful",
+      "GraphQL",
       "Sass",
     ],
   },
