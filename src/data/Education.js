@@ -1,4 +1,4 @@
-const Educationsdata = [
+const educationsdata = [
   {
     degree: "Msc in Digital Design & Communication",
     school: "IT-University of Copenhagen",
@@ -11,4 +11,4 @@ const Educationsdata = [
   },
 ];
 
-export default Educationsdata;
+export default educationsdata;

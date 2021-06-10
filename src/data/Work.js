@@ -1,4 +1,4 @@
-const Workdata = [
+const workdata = [
   {
     title: "Frontend Developer",
     workplace: "Lamia",
@@ -45,4 +45,4 @@ const Workdata = [
   },
 ];
 
-export default Workdata;
+export default workdata;

@@ -21,22 +21,22 @@ const Main = () => {
 
   return (
     <div className={theme ? '' : 'twinkling-fix-background'}>
-    <div className={theme ? '' : 'twinkling-fix'}>
-      <div className="main container" style={{ opacity: loadContent }}>
-        <Header />
-        <div className="main__current-job">Currently {theme ? 'employed' : 'protecting the universe from evil'} at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
-        <Resume />
-        <div className="main__contact">
-          Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
-        </div>
-        <br />
-        <div className="github-link">
-          <a target="blank" href="https://www.github.com/JonasThers">
-            <img src={Github} />
-          </a>
+      <div className={theme ? '' : 'twinkling-fix'}>
+        <div className="main container" style={{ opacity: loadContent }}>
+          <Header />
+          <div className="main__current-job">Currently {theme ? 'employed' : 'protecting the universe from evil'} at <a target="blank" href="https://www.lamia.fi">Lamia</a></div>
+          <Resume />
+          <div className="main__contact">
+            Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
+          </div>
+          <br />
+          <div className="github-link">
+            <a target="blank" href="https://www.github.com/JonasThers">
+              <img src={Github} />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

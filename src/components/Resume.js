@@ -1,33 +1,33 @@
 import React from "react";
-import Educationsdata from "../data/Education";
-import Workdata from "../data/Work";
+import educationsdata from "../data/Education";
+import workdata from "../data/Work";
 
 const Resume = () => {
   return (
     <div className="resume">
       <div className="resume__education">
       <div className="resume__education-title">Education:</div>
-        {Educationsdata.map((Educationsdata, index) => {
+        {educationsdata.map((educationsdata, index) => {
           return (
-            <div className="experience" key={Educationsdata.index}>
-              <div className="experience__title">{Educationsdata.degree}</div>
-              <div>- From {Educationsdata.school}</div>
-              <div>- Electives: {Educationsdata.electives}</div>
+            <div className="experience" key={index}>
+              <div className="experience__title">{educationsdata.degree}</div>
+              <div>- From {educationsdata.school}</div>
+              <div>- Electives: {educationsdata.electives}</div>
             </div>
           );
         })}
       </div>
       <div className="resume__work">
         <div className="resume__work-title">Work experience:</div>
-        {Workdata.map((Workdata, index) => {
+        {workdata.map((workdata, index) => {
           return (
-            <div className="experience" key={Workdata.index}>
-              <div className="experience__title">{Workdata.title}</div>
-              <div>- At {Workdata.workplace}</div>
+            <div className="experience" key={index}>
+              <div className="experience__title">{workdata.title}</div>
+              <div>- At {workdata.workplace}</div>
               <div>
-                - {Workdata.start} - {Workdata.end}
+                - {workdata.start} - {workdata.end}
               </div>
-              <div>- Technologies used: {Workdata.technologies.join(", ")}</div>
+              <div>- Technologies used: {workdata.technologies.join(", ")}</div>
             </div>
           );
         })}
