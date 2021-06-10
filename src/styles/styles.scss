@@ -46,7 +46,6 @@ body {
     * {
       color: map-get($colors, "white");
     }
-  
   }
 
   button {
@@ -296,7 +295,7 @@ button {
 }
 
 .main {
-  padding-top: map-get($spacing-unit, "giant");
+  padding-top: map-get($spacing-unit, "biggest");
 
   .github-link {
     padding-bottom: map-get($spacing-unit, "default");
@@ -348,8 +347,8 @@ button {
   &__work {
     border: 2px solid map-get($colors, "white");
     border-radius: 5px;
-    padding: map-get($spacing-unit, "default") map-get($spacing-unit, "default")
-      0 map-get($spacing-unit, "default");
+    padding: map-get($spacing-unit, "medium") map-get($spacing-unit, "medium")
+      map-get($spacing-unit, "default") map-get($spacing-unit, "medium");
     background: map-get($colors, "black");
     font-size: 14px;
 
