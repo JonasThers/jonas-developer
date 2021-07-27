@@ -31,7 +31,7 @@ const Opening = () => {
       <Header />
       <div className="center">
         <button onClick={buttonClick}>{theme ? 'Learn more about me' : 'Press here to start'}</button>
-        {!theme && <div className="opening__trademark">Jonas Thers © 2021</div>}
+        {!theme && <div className="opening__trademark">© 2021 Jonas</div>}
       </div>
     </div>
   );

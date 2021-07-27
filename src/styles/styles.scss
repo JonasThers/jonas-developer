@@ -234,7 +234,7 @@ body {
 .header {
   text-align: center;
   font-size: map-get($font-sizes, "big");
-  text-shadow: 1px 2px map-get($colors, "red");
+  text-shadow: 0px 4px map-get($colors, "red");
 }
 
 .opening,
@@ -276,12 +276,16 @@ button {
 
   &.skip {
     position: absolute;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     right: 0;
     margin-left: auto;
     margin-right: auto;
     width: auto;
     bottom: map-get($spacing-unit, "default");
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -378,6 +382,10 @@ button {
 @media only screen and (min-width: 992px) {
   .intro__text {
     font-size: 20px;
+  }
+
+  .header {
+    font-size: map-get($font-sizes, "desktop-header");
   }
 
   button {
