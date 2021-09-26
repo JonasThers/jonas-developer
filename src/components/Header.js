@@ -5,9 +5,9 @@ const Header = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="header">
+    <h2 className="header">
         {theme ? 'Hello world, my name is Jonas' : 'Jonas The Developer'}
-    </div>
+    </h2>
   );
 };
 

@@ -12,6 +12,10 @@ body {
   background-attachment: fixed;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .retro-background {
   background: #000 url("../assets/stars-min.png") repeat top center;
   z-index: 1;

@@ -6,28 +6,28 @@ const Resume = () => {
   return (
     <div className="resume">
       <div className="resume__education">
-      <div className="resume__education-title">Education:</div>
+      <h3 className="resume__education-title">Education:</h3>
         {educationsdata.map((educationsdata, index) => {
           return (
             <div className="experience" key={index}>
-              <div className="experience__title">{educationsdata.degree}</div>
-              <div>- From {educationsdata.school}</div>
-              <div>- Electives: {educationsdata.electives}</div>
+              <p className="experience__title">{educationsdata.degree}</p>
+              <p>- From {educationsdata.school}</p>
+              <p>- Electives: {educationsdata.electives}</p>
             </div>
           );
         })}
       </div>
       <div className="resume__work">
-        <div className="resume__work-title">Work experience:</div>
+        <h3 className="resume__work-title">Work experience:</h3>
         {workdata.map((workdata, index) => {
           return (
             <div className="experience" key={index}>
               <div className="experience__title">{workdata.title}</div>
-              <div>- At {workdata.workplace}</div>
-              <div>
+              <p>- At {workdata.workplace}</p>
+              <p>
                 - {workdata.start} - {workdata.end}
-              </div>
-              <div>- Technologies used: {workdata.technologies.join(", ")}</div>
+              </p>
+              <p>- Technologies used: {workdata.technologies.join(", ")}</p>
             </div>
           );
         })}
