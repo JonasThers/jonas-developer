@@ -20,11 +20,8 @@ p {
   background: #000 url("../assets/stars-min.png") repeat top center;
   z-index: 1;
   height: 100vh;
-
-  * {
-    font-family: "Press Start 2P", cursive;
-    text-transform: uppercase;
-  }
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
 
   button,
   .header,
@@ -41,15 +38,10 @@ p {
     map-get($colors, "dark-blue"),
     map-get($colors, "light-blue")
   );
-
-  * {
-    font-family: "Poppins", sans-serif;
-  }
+  font-family: "Poppins", sans-serif;
 
   .intro {
-    * {
-      color: map-get($colors, "white");
-    }
+    color: map-get($colors, "white");
   }
 
   button {
