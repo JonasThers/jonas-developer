@@ -33,10 +33,12 @@ const LoadingScreen = () => {
     <div className="intro container" style={{ opacity: loadContent }}>
       {startTyping && (
         <div className="intro__text">
-          {theme ? <ModernOpening /> : <RetroOpening /> }
-          <button className="skip" onClick={skipIntro}>
-            Skip intro
-          </button>
+          {theme ? <ModernOpening /> : <RetroOpening />}
+          <div className="skip-button">
+            <button className="skip" onClick={skipIntro}>
+              Skip intro
+            </button>
+          </div>
         </div>
       )}
     </div>

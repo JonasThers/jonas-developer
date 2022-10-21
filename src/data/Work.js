@@ -1,9 +1,20 @@
-const workdata = [
+const workData = [
+  {
+    title: "Software Developer",
+    workPlace: "Venuu",
+    start: "December 2022",
+    end: "Now",
+    technologies: [
+      "React",
+      "Ruby on Rails",
+      "MySQL",
+    ],
+  },
   {
     title: "Frontend Developer",
-    workplace: "Lamia",
+    workPlace: "Lamia",
     start: "August 2019",
-    end: "Now",
+    end: "November 2022",
     technologies: [
       "Magento 2",
       "PHP",
@@ -17,32 +28,25 @@ const workdata = [
   },
   {
     title: "Student Developer",
-    workplace: "C&C Travel",
+    workPlace: "C&C Travel",
     start: "October 2018",
     end: "March 2019",
     technologies: ["PHP", "MySQL", "CSS", "Drupal 7 & 8"],
   },
   {
     title: "Frontend Teacher",
-    workplace: "Coding Pirates",
+    workPlace: "Coding Pirates",
     start: "September 2018",
     end: "December 2018",
     technologies: ["HTML", "CSS", "Javascript"],
   },
   {
     title: "Wordpress Developer",
-    workplace: "Action Child Aid",
+    workPlace: "Action Child Aid",
     start: "February 2018",
     end: "October 2018",
     technologies: ["Wordpress", "PHP", "CSS"],
   },
-  {
-    title: "Web & Communication Student",
-    workplace: "Management of Culture and Leisure at Copenhagen Municipality",
-    start: "October 2017",
-    end: "September 2018",
-    technologies: ["Drupal 7", "Google My Business"],
-  },
 ];
 
-export default workdata;
+export default workData;

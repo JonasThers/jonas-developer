@@ -2,4 +2,4 @@
 
 <p>Personal site</p>
 
-<p>Built with Webpack, React Hooks and Sass</p>
+<p>Built with Webpack, React and Sass</p>

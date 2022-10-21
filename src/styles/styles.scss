@@ -25,8 +25,7 @@ p {
 
   button,
   .header,
-  .resume__work,
-  .resume__education,
+  .resume-container
   .opening__trademark {
     color: map-get($colors, "white");
   }
@@ -44,6 +43,10 @@ p {
     color: map-get($colors, "white");
   }
 
+  .intro__content span {
+    color: map-get($colors, "white");
+  }
+
   button {
     color: map-get($colors, "white");
     background: transparent;
@@ -57,8 +60,7 @@ p {
     font-weight: bold;
   }
 
-  .resume__work,
-  .resume__education {
+  .resume-container {
     background: map-get($colors, "white");
     color: map-get($colors, "black");
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -88,41 +90,66 @@ p {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
 
-  &__title {
-    margin-bottom: 0.5em;
-    color: map-get($colors, "white");
+.switch__title {
+  margin-bottom: map-get($spacing-unit, "tiny");
+  color: map-get($colors, "white");
+}
+
+.switch .off {
+  border: 2px solid map-get($colors, "white");
+
+  .react-switch-bg {
+    background: map-get($colors, "black") !important;
   }
 
-  .off {
-    border: 2px solid map-get($colors, "white");
-
-    .react-switch-bg {
-      background: map-get($colors, "black") !important;
-    }
-  }
-
-  .on {
-    color: map-get($colors, "black");
-
-    .react-switch-bg {
-      background: map-get($colors, "white") !important;
-    }
-
-    .react-switch-handle {
-      background: map-get($colors, "light-blue") !important;
-
-      &:focus {
-        outline: none;
-      }
+  .react-switch-handle {
+    background: map-get($colors, "white") !important;
+    
+    &:focus {
+      outline: none;
     }
   }
 }
 
-.retro {
-  .switch__title {
-    font-size: map-get($font-sizes, "small");
+.switch .on {
+  color: map-get($colors, "black");
+}
+
+.switch .on .react-switch-bg {
+  background: map-get($colors, "white") !important;
+}
+
+.react-switch-handle {
+  background: map-get($colors, "light-blue") !important;
+
+  &:focus {
+    outline: none;
   }
+}
+
+.retro-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 9px;
+  color: map-get($colors, "white");
+  padding-right: 15px;
+}
+
+.modern-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: map-get($font-sizes, "small");
+  padding-left: 22px;
+}
+
+.retro .switch__title {
+  font-size: map-get($font-sizes, "small");
 }
 
 @keyframes move-twink-back {
@@ -224,7 +251,7 @@ p {
 }
 
 .twinkling-fix-background {
-  background: #000 url("../assets/stars-min.png") repeat top center;
+  background: map-get($colors, "black") url("../assets/stars-min.png") repeat top center;
 }
 
 .header {
@@ -245,10 +272,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  &__trademark {
-    margin-top: map-get($spacing-unit, "default");
-  }
+.opening__trademark {
+  margin-top: map-get($spacing-unit, "default");
+  color: map-get($colors, "white");
 }
 
 .center {
@@ -269,18 +297,18 @@ button {
   &:focus {
     outline: none;
   }
+}
 
-  &.skip {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    right: 0;
-    width: auto;
-    bottom: map-get($spacing-unit, "default");
-    display: flex;
-    justify-content: center;
-  }
+.skip-button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  right: 0;
+  width: auto;
+  bottom: map-get($spacing-unit, "default");
+  display: flex;
+  justify-content: center;
 }
 
 .intro__text {
@@ -294,88 +322,88 @@ button {
 
 .main {
   padding-top: map-get($spacing-unit, "biggest");
+}
 
-  .github-link {
-    padding-bottom: map-get($spacing-unit, "default");
-    text-align: center;
+.main__current-job {
+  border-top: 2px solid map-get($colors, "white");
+  border-bottom: 2px solid map-get($colors, "white");
+  text-align: center;
+  padding: map-get($spacing-unit, "small") 0 map-get($spacing-unit, "small") 0;
+  margin-top: map-get($spacing-unit, "default");
+  margin-bottom: map-get($spacing-unit, "default");
+}
 
-    a {
-      border-bottom: 0;
-    }
+.main__current-job a {
+  word-break: break-word;
+}
 
-    img {
-      height: 60px;
-      width: 60px;
-    }
-  }
+.main__contact {
+  text-align: center;
+  margin-top: map-get($spacing-unit, "big");
+}
 
-  a {
-    color: map-get($colors, "white");
-    padding-bottom: 3px;
-    border-bottom: 2px solid map-get($colors, "white");
-    word-break: break-all;
-    text-decoration: none;
-  }
+.main a {
+  color: map-get($colors, "white");
+  padding-bottom: 3px;
+  border-bottom: 2px solid map-get($colors, "white");
+  word-break: break-all;
+  text-decoration: none;
+}
 
-  &__current-job {
-    border-top: 2px solid map-get($colors, "white");
-    border-bottom: 2px solid map-get($colors, "white");
-    text-align: center;
-    padding: 1em 0 1em 0;
-    margin-top: map-get($spacing-unit, "default");
-    margin-bottom: map-get($spacing-unit, "default");
+.github-link {
+  padding-bottom: map-get($spacing-unit, "default");
+  text-align: center;
+}
 
-    a {
-      word-break: break-word;
-    }
-  }
+.github-link a {
+  border-bottom: 0;
+}
 
-  &__contact {
-    text-align: center;
-    margin-top: map-get($spacing-unit, "big");
-  }
+.github-link img {
+  height: 60px;
+  width: 60px;
 }
 
 .resume {
   display: flex;
   margin-top: map-get($spacing-unit, "default");
   flex-direction: column;
+}
 
-  &__education,
-  &__work {
-    border: 2px solid map-get($colors, "white");
-    border-radius: 5px;
-    padding: map-get($spacing-unit, "medium") map-get($spacing-unit, "medium")
-      map-get($spacing-unit, "default") map-get($spacing-unit, "medium");
-    background: map-get($colors, "black");
-    font-size: 14px;
+.resume-container {
+  margin-bottom: map-get($spacing-unit, "default");
+  color: map-get($colors, "white");
+}
 
-    &-title {
-      text-align: center;
-      margin-bottom: 1em;
-      font-size: map-get($font-sizes, "default");
-    }
-  }
+.experience {
+  margin-bottom: map-get($spacing-unit, "default");
+  line-height: 1.7em;
+  margin-left: map-get($spacing-unit, "small");
+}
 
-  &__education {
-    margin-bottom: map-get($spacing-unit, "default");
-  }
+.experience__title {
+  font-size: map-get($font-sizes, "default");
+  margin-left: -1em;
+}
 
-  .experience {
-    margin-bottom: map-get($spacing-unit, "default");
-    line-height: 1.7em;
-    margin-left: 1em;
+.resume-container {
+  border: 2px solid map-get($colors, "white");
+  border-radius: 5px;
+  padding: map-get($spacing-unit, "medium") map-get($spacing-unit, "medium")
+    map-get($spacing-unit, "default") map-get($spacing-unit, "medium");
+  background: map-get($colors, "black");
+  font-size: 14px;
+}
 
-    &__title {
-      font-size: map-get($font-sizes, "default");
-      margin-left: -1em;
-    }
-  }
+.resume-container__title {
+  text-align: center;
+  margin-bottom: map-get($spacing-unit, "small");
+  font-size: map-get($font-sizes, "default");
 }
 
 @media only screen and (min-width: 992px) {
   .intro__text {
-    font-size: 20px;
+    font-size: map-get($font-sizes, "default");
   }
 
   .header {
@@ -391,15 +419,14 @@ button {
   .resume {
     flex-direction: row;
     align-items: start;
+  }
 
-    &__education,
-    &__work {
-      width: 50%;
-    }
+  .resume-container {
+    width: 50%;
+  }
 
-    &__education {
-      margin-right: map-get($spacing-unit, "default");
-      margin-bottom: 0;
-    }
+  .resume-container:first-of-type {
+    margin-right: map-get($spacing-unit, "default");
+    margin-bottom: 0;
   }
 }
