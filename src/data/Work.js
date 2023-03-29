@@ -8,6 +8,8 @@ const workData = [
       "React",
       "Ruby on Rails",
       "MySQL",
+      "Cypress",
+      "RSpec"
     ],
   },
   {
