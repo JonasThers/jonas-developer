@@ -3,8 +3,8 @@ import Opening from "./components/Opening";
 import LoadingScreen from "./components/LoadingScreen";
 import Main from "./components/Main";
 import ThemeSwitcher from "./components/ThemeSwitcher";
-import { LoadingContext } from "./components/LoadingContext";
-import { ThemeContext } from "./components/ThemeContext";
+import { LoadingContext } from "./context/LoadingContext";
+import { ThemeContext } from "./context/ThemeContext";
 
 const App = () => {
   const [loading, setLoading] = useState(1);

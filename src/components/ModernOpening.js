@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { LoadingContext } from "./LoadingContext";
+import { LoadingContext } from "../context/LoadingContext";
 import Typing from "react-typing-animation";
 
 const ModernOpening = () => {

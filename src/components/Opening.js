@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Header from './Header';
-import { LoadingContext } from "./LoadingContext";
-import { ThemeContext } from "./ThemeContext";
+import { LoadingContext } from "../context/LoadingContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Opening = () => {
   const [loadContent, setLoadContent] = useState(0);

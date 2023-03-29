@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import RetroOpening from "./RetroOpening";
 import ModernOpening from "./ModernOpening";
-import { LoadingContext } from "./LoadingContext";
-import { ThemeContext } from "./ThemeContext";
+import { LoadingContext } from "../context/LoadingContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const LoadingScreen = () => {
   const { loading, setLoading } = useContext(LoadingContext);
