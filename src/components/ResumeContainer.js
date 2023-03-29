@@ -3,7 +3,7 @@ import React from "react";
 const ResumeContainer = (props) => {
   if (props.type === "work") {
     return (
-      <div className="resume-container">
+      <section className="resume-container">
         <h3 className="resume-container__title">{props.title}:</h3>
         {props.data.map((work, index) => {
           return (
@@ -17,12 +17,12 @@ const ResumeContainer = (props) => {
             </div>
           );
         })}
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="resume-container">
+    <section className="resume-container">
       <h3 className="resume-container__title">{props.title}:</h3>
       {props.data.map((education, index) => {
         return (
@@ -33,7 +33,7 @@ const ResumeContainer = (props) => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

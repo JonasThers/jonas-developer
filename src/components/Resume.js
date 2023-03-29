@@ -5,7 +5,7 @@ import workData from "../data/Work";
 
 const Resume = () => {
   return (
-    <div className="resume">
+    <section className="resume">
       <ResumeContainer
         title="Education"
         type="education"
@@ -16,7 +16,7 @@ const Resume = () => {
         type="work" 
         data={workData} 
       />
-    </div>
+    </section>
   );
 };
 
