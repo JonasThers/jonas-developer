@@ -24,7 +24,7 @@ const Main = () => {
       <div className={theme ? '' : 'twinkling-fix'}>
         <div className="main container" style={{ opacity: loadContent }}>
           <Header />
-          <div className="main__current-job">Currently {theme ? 'employed' : 'protecting the universe from evil'} at <a target="blank" href="https://venuu.fi/">Venuu</a></div>
+          <div className="main__current-job">Currently {theme ? 'employed' : 'protecting the universe from evil'} at <a target="blank" href="https://venuu.com/">Venuu</a></div>
           <Resume />
           <div className="main__contact">
             Reach me at <a href="mailto: jonasthers1992@gmail.com">jonasthers1992@gmail.com</a>
