@@ -13,15 +13,26 @@ const App = () => {
   const loadingValue = useMemo(() => ({ loading, setLoading }));
   const themeValue = useMemo(() => ({ theme, setTheme }));
 
+  const renderComponents = () => {
+    switch(loading) {
+      case 1:
+        return <Opening />;
+      case 2:
+        return <LoadingScreen />;
+      case 3:
+        return <Main />;
+      default:
+        return <Opening />;
+    }
+  }
+
   return (
     <ThemeContext.Provider value={themeValue}>
       <div className={theme ? 'modern-background' : 'retro-background'}>
         <div className={theme ? 'modern' : 'retro twinkling'}>
           <ThemeSwitcher />
           <LoadingContext.Provider value={loadingValue}>
-            {loading === 1 && <Opening />}
-            {loading === 2 && <LoadingScreen />}
-            {loading === 3 && <Main />}
+            {renderComponents()}
           </LoadingContext.Provider>
         </div>
       </div>
